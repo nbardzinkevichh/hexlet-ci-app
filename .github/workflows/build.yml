@@ -1,0 +1,17 @@
+name: build
+on: push
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    steps:
+        - uses: actions/checkout@main
+        - uses: actions/setup-node
+        - run: make setup
+        - run: make start
+        - name: run tests
+          run: make test
+        - name: run lint
+          run: make lint
