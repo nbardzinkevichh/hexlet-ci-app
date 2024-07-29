@@ -8,7 +8,9 @@ jobs:
         os: [ubuntu-latest, macos-latest]
     steps:
         - uses: actions/checkout@main
-        - uses: actions/setup-node
+        - uses: actions/setup-node@v4
+          with:
+            node-version: 18
         - run: make setup
         - run: make start
         - name: run tests
