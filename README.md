@@ -1,4 +1,4 @@
-https://github.com/nbardzinkevichh/hexlet-ci-app/actions/workflows/build.yml/badge.svg
+![example workflow](https://github.com/nbardzinkevichh/hexlet-ci-app/actions/workflows/build.yml/badge.svg)
 
 # Example app for CI Hexlet course
 
