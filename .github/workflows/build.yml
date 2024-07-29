@@ -2,10 +2,7 @@ name: build
 on: push
 jobs:
   build:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [ubuntu-latest, macos-latest]
+    runs-on: macos-latest
     steps:
         - uses: actions/checkout@main
         - uses: actions/setup-node@v4
