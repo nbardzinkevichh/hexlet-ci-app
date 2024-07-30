@@ -2,7 +2,7 @@ name: build-project
 on: push
 jobs:
   build:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
         - uses: actions/checkout@v3
         - uses: actions/setup-node@v3
@@ -11,4 +11,5 @@ jobs:
           run: make test
         - name: run lint
           run: make lint
+        - run: make start
 
