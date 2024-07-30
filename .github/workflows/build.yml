@@ -15,7 +15,7 @@ jobs:
         - name: run lint
           run: make lint
         - name: snyk
-          uses: nyk/actions/node@main
+          uses: snyk/actions/node@main
           env:
             SNYK_TOKEN: ${{ secrets.e2ee3e18-604e-4a82-821d-c965cbb7b227 }}
 
