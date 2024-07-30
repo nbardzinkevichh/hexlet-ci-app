@@ -4,12 +4,18 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-        - uses: actions/checkout@v3
-        - uses: actions/setup-node@v3
+        - uses: actions/checkout@main
+        - uses: actions/setup-node@v4
+          with:
+            node-version: 18
+            cache: 'npm'
         - run: make setup
         - name: run tests
           run: make test
         - name: run lint
           run: make lint
-        - run: make start
+        - name: snyk
+          uses: nyk/actions/node@main
+          env:
+            SNYK_TOKEN: ${{ secrets.e2ee3e18-604e-4a82-821d-c965cbb7b227 }}
 
